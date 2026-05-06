@@ -3,462 +3,574 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Cámara de Ganaderos de Cañas | Guanacaste, Costa Rica</title>
-<meta name="description" content="Asociación Cámara de Ganaderos de Cañas. Subasta ganadera, Almacén Agroveterinario San Rafael, pesaje, caballerizas y más. Cañas, Guanacaste.">
+<title>Asociación Cámara de Ganaderos de Cañas | Guanacaste, Costa Rica</title>
+<meta name="description" content="Asociación Cámara de Ganaderos de Cañas. Subasta ganadera los martes y sábados, Almacén Agroveterinario San Rafael, pesaje de ganado, caballerizas y capacitaciones.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
 <style>
-*{margin:0;padding:0;box-sizing:border-box}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
 :root{
-  --verde:#2d6a1f;--verde-claro:#4a9632;--verde-oscuro:#1a3f12;
-  --azul:#1a4a8a;--azul-claro:#2563a8;
-  --dorado:#c8961a;--dorado-claro:#f0b429;
-  --blanco:#fafaf8;--gris:#f4f3ef;
-  --texto:#1c1c1a;--texto-suave:#5a5a52;
+  --verde:#1f5c14;--verde-med:#2d7a1e;--verde-oscuro:#133a0d;--verde-suave:#eef6eb;
+  --azul:#0f3460;--dorado:#b8860b;--dorado-claro:#d4a017;--dorado-suave:#fdf6e3;
+  --blanco:#ffffff;--gris-claro:#f7f7f5;--gris-med:#e8e6e0;--gris-texto:#555550;--texto:#1a1a18;
+  --titulo:'Playfair Display',Georgia,serif;--cuerpo:'Lato',Arial,sans-serif;
 }
 html{scroll-behavior:smooth}
-body{font-family:'Source Sans 3',sans-serif;color:var(--texto);background:var(--blanco)}
-
-/* NAV */
-nav{
-  position:sticky;top:0;z-index:100;
-  background:var(--verde-oscuro);
-  display:flex;align-items:center;justify-content:space-between;
-  padding:0 2rem;height:64px;
-  border-bottom:3px solid var(--dorado);
-}
-.nav-brand{display:flex;align-items:center;gap:10px;text-decoration:none}
-.nav-logo{width:46px;height:46px;border-radius:50%;background:white;display:flex;align-items:center;justify-content:center;border:2px solid var(--dorado);overflow:hidden;flex-shrink:0}
-.nav-logo img{width:100%;height:100%;object-fit:cover}
-.nav-brand-text{color:white;font-family:'Merriweather',serif;font-size:13px;line-height:1.3}
-.nav-brand-text span{color:var(--dorado-claro);font-size:11px;font-family:'Source Sans 3',sans-serif;display:block;font-weight:400}
-.nav-links{display:flex;gap:4px}
-.nav-links a{color:rgba(255,255,255,0.85);text-decoration:none;font-size:13px;font-weight:500;padding:6px 12px;border-radius:6px;transition:all 0.2s}
-.nav-links a:hover{background:rgba(255,255,255,0.12);color:var(--dorado-claro)}
-.nav-links a.active{background:var(--dorado);color:var(--verde-oscuro)}
-.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px}
-.hamburger span{width:22px;height:2px;background:white;border-radius:2px;transition:all 0.3s}
-.mobile-menu{display:none;position:fixed;top:67px;left:0;right:0;background:var(--verde-oscuro);flex-direction:column;padding:1rem;gap:4px;z-index:99;border-bottom:3px solid var(--dorado)}
-.mobile-menu a{color:rgba(255,255,255,0.85);text-decoration:none;font-size:15px;font-weight:500;padding:10px 16px;border-radius:6px;transition:background 0.2s}
-.mobile-menu a:hover,.mobile-menu a.active{background:var(--dorado);color:var(--verde-oscuro)}
-
-/* SECTIONS */
+body{font-family:var(--cuerpo);color:var(--texto);background:var(--blanco);font-size:16px;line-height:1.6}
+img{max-width:100%;display:block}
+a{text-decoration:none;color:inherit}
+.topbar{background:var(--verde-oscuro);color:rgba(255,255,255,.75);font-size:12px;letter-spacing:.3px;padding:7px 2rem;display:flex;justify-content:space-between;align-items:center;gap:1rem;flex-wrap:wrap}
+.topbar a{color:rgba(255,255,255,.75);transition:color .2s}
+.topbar a:hover{color:var(--dorado-claro)}
+.topbar-left,.topbar-right{display:flex;gap:1.5rem;align-items:center;flex-wrap:wrap}
+nav{position:sticky;top:0;z-index:100;background:var(--blanco);border-bottom:3px solid var(--dorado);box-shadow:0 2px 12px rgba(0,0,0,.08)}
+.nav-inner{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:0 2rem;height:74px}
+.nav-brand{display:flex;align-items:center;gap:14px}
+.nav-logo{width:58px;height:58px;border-radius:50%;background:var(--blanco);border:2px solid var(--gris-med);overflow:hidden;flex-shrink:0;display:flex;align-items:center;justify-content:center}
+.nav-logo img{width:100%;height:100%;object-fit:contain}
+.nav-brand-text strong{font-family:var(--titulo);font-size:15px;color:var(--verde-oscuro);display:block}
+.nav-brand-text span{font-size:11px;color:var(--gris-texto);letter-spacing:.5px;text-transform:uppercase}
+.nav-links{display:flex;gap:2px}
+.nav-links a{font-size:13px;font-weight:700;letter-spacing:.5px;text-transform:uppercase;color:var(--gris-texto);padding:8px 14px;border-radius:4px;transition:all .2s}
+.nav-links a:hover{color:var(--verde);background:var(--verde-suave)}
+.nav-links a.active{color:var(--verde-oscuro);border-bottom:2px solid var(--dorado)}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:6px;background:none;border:none}
+.hamburger span{width:24px;height:2px;background:var(--verde-oscuro);border-radius:2px;transition:all .3s;display:block}
+.mobile-menu{display:none;position:fixed;top:74px;left:0;right:0;background:var(--blanco);flex-direction:column;padding:1rem 1.5rem;gap:2px;z-index:99;border-bottom:3px solid var(--dorado);box-shadow:0 8px 24px rgba(0,0,0,.12)}
+.mobile-menu a{font-size:14px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:var(--gris-texto);padding:12px 16px;border-radius:4px;transition:all .2s}
+.mobile-menu a:hover,.mobile-menu a.active{color:var(--verde-oscuro);background:var(--verde-suave)}
 section{display:none}
 section.active{display:block}
-
-/* HERO */
-.hero{position:relative;height:520px;overflow:hidden}
-.hero-img{width:100%;height:100%;object-fit:cover;object-position:center 30%}
-.hero-overlay{position:absolute;inset:0;background:linear-gradient(to right,rgba(26,63,18,0.88) 0%,rgba(26,63,18,0.6) 60%,transparent 100%)}
-.hero-content{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;padding:3rem 3rem}
-.hero-badge{display:inline-block;background:rgba(200,150,26,0.3);border:1px solid var(--dorado);color:var(--dorado-claro);font-size:11px;font-weight:600;letter-spacing:2px;text-transform:uppercase;padding:4px 14px;border-radius:20px;margin-bottom:1.25rem;width:fit-content}
-.hero h1{font-family:'Merriweather',serif;font-size:2.5rem;color:white;line-height:1.2;margin-bottom:1rem;max-width:500px}
-.hero h1 span{color:var(--dorado-claro)}
-.hero p{color:rgba(255,255,255,0.85);font-size:1rem;max-width:420px;line-height:1.7;margin-bottom:2rem}
-.hero-buttons{display:flex;gap:12px;flex-wrap:wrap}
-.btn-primary{background:var(--dorado);color:var(--verde-oscuro);font-weight:600;font-size:14px;padding:12px 24px;border-radius:8px;border:none;cursor:pointer;transition:all 0.2s;font-family:'Source Sans 3',sans-serif;text-decoration:none;display:inline-block}
-.btn-primary:hover{background:var(--dorado-claro);transform:translateY(-1px)}
-.btn-secondary{background:transparent;color:white;font-weight:500;font-size:14px;padding:12px 24px;border-radius:8px;border:1.5px solid rgba(255,255,255,0.5);cursor:pointer;transition:all 0.2s;font-family:'Source Sans 3',sans-serif;text-decoration:none;display:inline-block}
-.btn-secondary:hover{border-color:white;background:rgba(255,255,255,0.1)}
-
-/* STATS BAR */
-.stats-bar{background:white;border-bottom:1px solid #e5e3dc;display:grid;grid-template-columns:repeat(4,1fr)}
-.stat-item{padding:1.2rem 1rem;text-align:center;border-right:1px solid #e5e3dc}
+.hero{position:relative;height:580px;overflow:hidden}
+.hero-img{width:100%;height:100%;object-fit:cover;object-position:center 35%}
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(90deg,rgba(19,58,13,.90) 0%,rgba(19,58,13,.65) 55%,rgba(19,58,13,.2) 100%)}
+.hero-content{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;padding:3rem;max-width:680px}
+.hero-logo-wrap{width:100px;height:100px;border-radius:50%;background:white;border:3px solid var(--dorado);overflow:hidden;margin-bottom:1.5rem;display:flex;align-items:center;justify-content:center}
+.hero-logo-wrap img{width:90%;height:90%;object-fit:contain}
+.hero-label{font-size:11px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--dorado-claro);margin-bottom:.75rem}
+.hero h1{font-family:var(--titulo);font-size:2.8rem;font-weight:700;color:var(--blanco);line-height:1.15;margin-bottom:1rem}
+.hero h1 em{color:var(--dorado-claro);font-style:normal}
+.hero-desc{color:rgba(255,255,255,.85);font-size:1rem;line-height:1.7;margin-bottom:2rem;max-width:460px}
+.hero-ctas{display:flex;gap:12px;flex-wrap:wrap}
+.btn-dorado{background:var(--dorado);color:var(--verde-oscuro);font-weight:700;font-size:13px;letter-spacing:.5px;text-transform:uppercase;padding:13px 28px;border-radius:4px;border:none;cursor:pointer;transition:all .2s;font-family:var(--cuerpo)}
+.btn-dorado:hover{background:var(--dorado-claro);transform:translateY(-1px);box-shadow:0 4px 12px rgba(0,0,0,.2)}
+.btn-outline{background:transparent;color:var(--blanco);font-weight:700;font-size:13px;letter-spacing:.5px;text-transform:uppercase;padding:13px 28px;border-radius:4px;border:2px solid rgba(255,255,255,.6);cursor:pointer;transition:all .2s;font-family:var(--cuerpo)}
+.btn-outline:hover{border-color:white;background:rgba(255,255,255,.1)}
+.stats-bar{background:var(--verde-oscuro);display:grid;grid-template-columns:repeat(4,1fr);border-bottom:3px solid var(--dorado)}
+.stat-item{padding:1.25rem 1rem;text-align:center;border-right:1px solid rgba(255,255,255,.1)}
 .stat-item:last-child{border-right:none}
-.stat-num{font-family:'Merriweather',serif;font-size:1.6rem;font-weight:700;color:var(--verde)}
-.stat-label{font-size:11px;color:var(--texto-suave);margin-top:2px;text-transform:uppercase;letter-spacing:0.5px}
-
-/* SECTION WRAPPER */
-.section-wrap{padding:3.5rem 2rem;max-width:960px;margin:0 auto}
-.section-title{font-family:'Merriweather',serif;font-size:1.7rem;color:var(--verde-oscuro);margin-bottom:0.5rem}
-.section-sub{color:var(--texto-suave);font-size:0.95rem;margin-bottom:2.5rem}
-.divider{width:48px;height:3px;background:var(--dorado);border-radius:2px;margin-bottom:1.25rem}
-
-/* FOTO GRID */
-.foto-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:2.5rem}
-.foto-grid img{width:100%;height:200px;object-fit:cover;border-radius:8px;transition:transform 0.3s}
-.foto-grid img:hover{transform:scale(1.02)}
-.foto-grid .foto-wide{grid-column:span 2}
-
-/* SERVICIOS */
-.services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
-.service-card{background:white;border:1px solid #e5e3dc;border-radius:12px;padding:1.5rem;cursor:pointer;transition:all 0.25s;border-top:3px solid var(--verde);text-decoration:none;display:block;color:var(--texto)}
-.service-card:hover{box-shadow:0 6px 20px rgba(0,0,0,0.08);transform:translateY(-2px);border-top-color:var(--dorado)}
-.service-img{width:100%;height:160px;object-fit:cover;border-radius:8px;margin-bottom:1rem}
-.service-icon{font-size:1.8rem;margin-bottom:0.7rem}
-.service-card h3{font-family:'Merriweather',serif;font-size:0.95rem;color:var(--verde-oscuro);margin-bottom:0.5rem}
-.service-card p{font-size:0.875rem;color:var(--texto-suave);line-height:1.6}
-.service-tag{display:inline-block;background:#eaf3de;color:var(--verde);font-size:11px;font-weight:600;padding:2px 8px;border-radius:10px;margin-top:10px}
-
-/* NOSOTROS */
-.nosotros-grid{display:grid;grid-template-columns:1fr 1fr;gap:2.5rem;align-items:start}
-.nosotros-foto{width:100%;height:280px;object-fit:cover;border-radius:12px;margin-bottom:1rem}
-.nosotros-text p{color:var(--texto-suave);line-height:1.8;margin-bottom:1rem;font-size:0.95rem}
-.nosotros-vals{display:flex;flex-direction:column;gap:12px}
-.val-item{display:flex;gap:12px;align-items:flex-start;padding:14px;background:var(--gris);border-radius:10px;border-left:3px solid var(--verde)}
-.val-icon{font-size:1.3rem;flex-shrink:0;margin-top:2px}
-.val-item h4{font-size:0.875rem;font-weight:600;color:var(--verde-oscuro);margin-bottom:3px}
-.val-item p{font-size:0.8rem;color:var(--texto-suave);line-height:1.5}
-
-/* TABLA PRECIOS */
-.precio-table{width:100%;border-collapse:collapse;background:white;border-radius:10px;overflow:hidden;border:1px solid #e5e3dc}
-.precio-table th{background:var(--verde);color:white;padding:12px 16px;text-align:left;font-size:13px;font-weight:600}
-.precio-table td{padding:11px 16px;border-bottom:1px solid #f0eeea;font-size:13px}
-.precio-table tr:last-child td{border-bottom:none}
-.precio-table tr:nth-child(even) td{background:var(--gris)}
-.precio-highlight{font-weight:700;color:var(--verde)}
-
-/* SUBASTA */
-.prox-banner{background:linear-gradient(135deg,var(--azul),var(--verde));color:white;border-radius:12px;padding:1.75rem 2rem;margin-bottom:2rem;display:flex;align-items:center;gap:1.5rem}
-.prox-banner-icon{font-size:2.5rem;flex-shrink:0}
-.prox-banner h3{font-family:'Merriweather',serif;font-size:1.1rem;margin-bottom:0.4rem}
-.prox-banner p{font-size:0.875rem;opacity:0.85}
-.subasta-fotos{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:2rem}
-.subasta-fotos img{width:100%;height:220px;object-fit:cover;border-radius:10px}
-
-/* GALERIA CAPACITACION */
-.cap-card{background:white;border:1px solid #e5e3dc;border-radius:12px;overflow:hidden;margin-bottom:2rem}
-.cap-card img{width:100%;height:260px;object-fit:cover;object-position:center 40%}
-.cap-card-body{padding:1.25rem}
-.cap-card-body h3{font-family:'Merriweather',serif;font-size:1rem;color:var(--verde-oscuro);margin-bottom:0.5rem}
-.cap-card-body p{font-size:0.875rem;color:var(--texto-suave);line-height:1.7}
-
-/* CONTACTO */
-.contacto-grid{display:grid;grid-template-columns:1fr 1fr;gap:2rem}
-.contacto-card{background:white;border:1px solid #e5e3dc;border-radius:12px;padding:1.5rem}
-.contacto-card h3{font-family:'Merriweather',serif;font-size:1rem;color:var(--verde-oscuro);margin-bottom:1rem;padding-bottom:0.75rem;border-bottom:1px solid #e5e3dc}
-.contacto-item{display:flex;align-items:center;gap:10px;margin-bottom:14px;font-size:0.9rem;color:var(--texto-suave)}
-.contacto-item i{font-size:20px;color:var(--verde);flex-shrink:0}
-.contacto-item a{color:var(--texto-suave);text-decoration:none}
-.contacto-item a:hover{color:var(--verde)}
-.mapa-wrap{border-radius:10px;overflow:hidden;border:1px solid #e5e3dc;height:260px}
+.stat-num{font-family:var(--titulo);font-size:1.8rem;color:var(--dorado-claro);font-weight:700}
+.stat-label{font-size:11px;color:rgba(255,255,255,.65);margin-top:3px;text-transform:uppercase;letter-spacing:.5px}
+.page-wrap{max-width:1100px;margin:0 auto;padding:4rem 2rem}
+.sec-head{margin-bottom:2.5rem}
+.eyebrow{font-size:11px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--dorado);margin-bottom:.5rem}
+.sec-head h2{font-family:var(--titulo);font-size:2rem;color:var(--verde-oscuro);line-height:1.2}
+.sec-head p{color:var(--gris-texto);margin-top:.75rem;font-size:.95rem;max-width:600px}
+.divline{width:48px;height:3px;background:var(--dorado);border-radius:2px;margin-top:1rem}
+.srv-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--gris-med);border:1px solid var(--gris-med);border-radius:8px;overflow:hidden}
+.srv-card{background:var(--blanco);padding:2rem 1.75rem;transition:background .2s;cursor:pointer}
+.srv-card:hover{background:var(--verde-suave)}
+.srv-icon{width:48px;height:48px;border-radius:8px;background:var(--verde-suave);margin-bottom:1.25rem;display:flex;align-items:center;justify-content:center}
+.srv-icon svg{width:24px;height:24px;stroke:var(--verde);fill:none;stroke-width:1.8}
+.srv-card h3{font-family:var(--titulo);font-size:1.05rem;color:var(--verde-oscuro);margin-bottom:.5rem}
+.srv-card p{font-size:.875rem;color:var(--gris-texto);line-height:1.65}
+.srv-tag{display:inline-block;background:var(--verde-suave);color:var(--verde);font-size:11px;font-weight:700;padding:3px 10px;border-radius:20px;margin-top:1rem;letter-spacing:.3px}
+.gal-grid{display:grid;grid-template-columns:2fr 1fr 1fr;grid-template-rows:200px 200px;gap:6px;border-radius:8px;overflow:hidden}
+.gal-grid img{width:100%;height:100%;object-fit:cover;transition:transform .4s}
+.gal-grid img:hover{transform:scale(1.03)}
+.gal-grid .g-main{grid-row:span 2}
+.nos-layout{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start}
+.nos-foto{width:100%;height:340px;object-fit:cover;border-radius:8px}
+.nos-txt p{color:var(--gris-texto);font-size:.95rem;line-height:1.8;margin-bottom:1rem}
+.dato-box{background:var(--gris-claro);border-left:3px solid var(--dorado);padding:1rem 1.25rem;border-radius:0 6px 6px 0;margin-top:1.5rem;font-size:.875rem;color:var(--gris-texto);line-height:1.7}
+.dato-box strong{color:var(--verde-oscuro)}
+.val-list{display:flex;flex-direction:column;gap:1px;background:var(--gris-med);border-radius:8px;overflow:hidden;margin-top:2rem}
+.val-item{background:var(--blanco);padding:1.25rem 1.5rem;display:flex;gap:1rem;align-items:flex-start}
+.val-num{font-family:var(--titulo);font-size:1.5rem;color:var(--dorado);font-weight:700;flex-shrink:0;line-height:1;margin-top:2px}
+.val-item h4{font-size:.875rem;font-weight:700;color:var(--verde-oscuro);margin-bottom:3px;text-transform:uppercase;letter-spacing:.3px}
+.val-item p{font-size:.8rem;color:var(--gris-texto);line-height:1.55}
+.mv-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:2rem}
+.mv-card{padding:1.5rem;border-radius:8px;border:1px solid var(--gris-med)}
+.mv-card .mv-lbl{font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--dorado);margin-bottom:.5rem}
+.mv-card h3{font-family:var(--titulo);font-size:1.1rem;color:var(--verde-oscuro);margin-bottom:.75rem}
+.mv-card p{font-size:.875rem;color:var(--gris-texto);line-height:1.7}
+.srv-bloque{margin-bottom:3rem;padding-bottom:3rem;border-bottom:1px solid var(--gris-med)}
+.srv-bloque:last-child{border-bottom:none;margin-bottom:0}
+.srv-bi{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center}
+.srv-bi.rev{direction:rtl}
+.srv-bi.rev>*{direction:ltr}
+.srv-bf{width:100%;height:280px;object-fit:cover;border-radius:8px}
+.srv-bloque h3{font-family:var(--titulo);font-size:1.5rem;color:var(--verde-oscuro);margin-bottom:.75rem}
+.srv-bloque p{font-size:.9rem;color:var(--gris-texto);line-height:1.75;margin-bottom:1rem}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:1rem}
+.chip{background:var(--gris-claro);border:1px solid var(--gris-med);padding:6px 14px;border-radius:20px;font-size:12px;color:var(--texto)}
+.chip strong{color:var(--verde-oscuro)}
+.ptable{width:100%;border-collapse:collapse;border-radius:8px;overflow:hidden;border:1px solid var(--gris-med);font-size:13px}
+.ptable thead tr{background:var(--verde-oscuro);color:white}
+.ptable th{padding:12px 16px;text-align:left;font-weight:700;letter-spacing:.3px}
+.ptable td{padding:10px 16px;border-bottom:1px solid var(--gris-med);color:var(--gris-texto)}
+.ptable tr:last-child td{border-bottom:none}
+.ptable tbody tr:nth-child(even) td{background:var(--gris-claro)}
+.ph{font-weight:700;color:var(--verde)}
+.prox{background:var(--verde-oscuro);color:white;border-radius:8px;padding:1.75rem 2rem;display:flex;align-items:center;gap:2rem;margin-bottom:2.5rem;border-left:5px solid var(--dorado)}
+.prox-txt h3{font-family:var(--titulo);font-size:1.2rem;margin-bottom:.3rem}
+.prox-txt p{font-size:.875rem;color:rgba(255,255,255,.75)}
+.prox-btn{background:var(--dorado);color:var(--verde-oscuro);font-weight:700;font-size:12px;letter-spacing:.5px;text-transform:uppercase;padding:8px 18px;border-radius:4px;white-space:nowrap;flex-shrink:0}
+.hor-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:2.5rem}
+.hor-card{background:var(--gris-claro);border-radius:8px;padding:1.5rem;border-top:3px solid var(--verde)}
+.hor-card .dia{font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--dorado);margin-bottom:.4rem}
+.hor-card h4{font-family:var(--titulo);font-size:1.1rem;color:var(--verde-oscuro);margin-bottom:.4rem}
+.hor-card p{font-size:.875rem;color:var(--gris-texto)}
+.sub-fotos{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:2rem 0}
+.sub-fotos img{width:100%;height:240px;object-fit:cover;border-radius:8px}
+.pasos{background:var(--verde-suave);border-radius:8px;padding:1.75rem 2rem;margin-top:2rem}
+.pasos h4{font-family:var(--titulo);font-size:1.1rem;color:var(--verde-oscuro);margin-bottom:1rem}
+.paso{display:flex;gap:12px;align-items:flex-start;font-size:.875rem;color:var(--gris-texto);margin-bottom:10px}
+.paso:last-child{margin-bottom:0}
+.paso-n{width:24px;height:24px;border-radius:50%;background:var(--verde);color:white;font-weight:700;font-size:12px;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px}
+.ctc-layout{display:grid;grid-template-columns:1fr 1fr;gap:3rem}
+.ctc-info h3{font-family:var(--titulo);font-size:1.3rem;color:var(--verde-oscuro);margin-bottom:1.5rem}
+.ctc-item{display:flex;gap:14px;align-items:flex-start;margin-bottom:1.25rem;padding-bottom:1.25rem;border-bottom:1px solid var(--gris-med)}
+.ctc-item:last-of-type{border-bottom:none}
+.ctc-ico{width:40px;height:40px;background:var(--verde-suave);border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.ctc-ico svg{width:20px;height:20px;stroke:var(--verde);fill:none;stroke-width:1.8}
+.ctc-lbl{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--dorado);margin-bottom:3px}
+.ctc-val{font-size:.9rem;color:var(--texto)}
+.ctc-val a{color:var(--texto);transition:color .2s}
+.ctc-val a:hover{color:var(--verde)}
+.mapa-wrap{border-radius:8px;overflow:hidden;border:1px solid var(--gris-med);height:320px;margin-bottom:1rem}
 .mapa-wrap iframe{width:100%;height:100%;border:none}
-
-/* FOOTER */
-footer{background:var(--verde-oscuro);color:rgba(255,255,255,0.7);padding:2.5rem 2rem;text-align:center;border-top:3px solid var(--dorado)}
-footer strong{color:white}
-.footer-social{display:flex;gap:16px;justify-content:center;margin-top:1rem;flex-wrap:wrap}
-.footer-social a{color:rgba(255,255,255,0.6);text-decoration:none;font-size:13px;transition:color 0.2s;display:flex;align-items:center;gap:5px}
-.footer-social a:hover{color:var(--dorado-claro)}
-
-/* WHATSAPP FLOAT */
-.wa-float{position:fixed;bottom:24px;right:24px;background:#25d366;color:white;width:52px;height:52px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:26px;text-decoration:none;box-shadow:0 4px 16px rgba(0,0,0,0.2);z-index:200;transition:transform 0.2s}
+.ub-nota{font-size:.8rem;color:var(--gris-texto);line-height:1.6}
+.redes{display:flex;gap:10px;margin-top:1.5rem}
+.red-btn{display:inline-flex;align-items:center;gap:8px;background:var(--gris-claro);border:1px solid var(--gris-med);color:var(--texto);font-size:13px;font-weight:700;padding:10px 18px;border-radius:4px;transition:all .2s}
+.red-btn:hover{background:var(--verde-suave);border-color:var(--verde);color:var(--verde-oscuro)}
+.red-btn svg{width:18px;height:18px;fill:currentColor}
+footer{background:var(--verde-oscuro);color:rgba(255,255,255,.65);padding:3rem 2rem 2rem;border-top:3px solid var(--dorado)}
+.ft-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr;gap:3rem}
+.ft-brand{display:flex;gap:14px;align-items:flex-start;margin-bottom:1rem}
+.ft-logo{width:52px;height:52px;border-radius:50%;background:white;overflow:hidden;flex-shrink:0;display:flex;align-items:center;justify-content:center}
+.ft-logo img{width:90%;height:90%;object-fit:contain}
+.ft-brand-txt strong{color:white;font-family:var(--titulo);font-size:14px;display:block;margin-bottom:3px}
+.ft-brand-txt span{font-size:11px}
+.ft-desc{font-size:.8rem;line-height:1.7;max-width:280px}
+.ft-col h4{color:white;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1px;margin-bottom:1rem}
+.ft-col ul{list-style:none;display:flex;flex-direction:column;gap:8px}
+.ft-col ul li{font-size:13px}
+.ft-col ul a{color:rgba(255,255,255,.65);transition:color .2s}
+.ft-col ul a:hover{color:var(--dorado-claro)}
+.ft-bot{max-width:1100px;margin:2.5rem auto 0;padding-top:1.5rem;border-top:1px solid rgba(255,255,255,.1);display:flex;justify-content:space-between;align-items:center;font-size:11px;flex-wrap:wrap;gap:.5rem}
+.ft-bot strong{color:rgba(255,255,255,.4)}
+.wa-float{position:fixed;bottom:24px;right:24px;background:#25d366;color:white;width:54px;height:54px;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 16px rgba(0,0,0,.2);z-index:200;transition:transform .2s;text-decoration:none}
 .wa-float:hover{transform:scale(1.1)}
-
-@media(max-width:700px){
-  .stats-bar{grid-template-columns:repeat(2,1fr)}
-  .nosotros-grid,.contacto-grid{grid-template-columns:1fr}
-  .hero{height:420px}
-  .hero h1{font-size:1.7rem}
+.wa-float svg{width:28px;height:28px;fill:white}
+@media(max-width:768px){
+  .topbar-left{display:none}
+  .hero{height:480px}
+  .hero h1{font-size:1.9rem}
   .hero-content{padding:2rem 1.5rem}
+  .hero-logo-wrap{width:76px;height:76px}
+  .stats-bar{grid-template-columns:repeat(2,1fr)}
   .nav-links{display:none}
   .hamburger{display:flex}
-  .foto-grid{grid-template-columns:1fr 1fr}
-  .foto-grid .foto-wide{grid-column:span 2}
-  .subasta-fotos{grid-template-columns:1fr}
-  .section-wrap{padding:2.5rem 1.25rem}
-  .prox-banner{flex-direction:column;gap:0.75rem;text-align:center}
+  .srv-grid{grid-template-columns:1fr}
+  .gal-grid{grid-template-columns:1fr 1fr;grid-template-rows:auto}
+  .gal-grid .g-main{grid-row:span 1;grid-column:span 2}
+  .nos-layout,.mv-grid,.srv-bi,.hor-grid,.sub-fotos,.ctc-layout{grid-template-columns:1fr}
+  .srv-bi.rev{direction:ltr}
+  .ft-inner{grid-template-columns:1fr;gap:2rem}
+  .prox{flex-direction:column;gap:1rem;align-items:flex-start}
+  .page-wrap{padding:2.5rem 1.25rem}
 }
 </style>
 </head>
 <body>
 
-<nav>
-  <a class="nav-brand" href="#" onclick="showSection('inicio')">
-    <div class="nav-logo">
-      <img src="https://raw.githubusercontent.com/mcjuarez27/camara-ganaderos-canas/main/Logo_Ca%CC%81mara_de_ganaderos.jpg" alt="Logo Cámara de Ganaderos de Cañas" onerror="this.style.display='none';this.parentNode.innerHTML='🐂'">
-    </div>
-    <div class="nav-brand-text">
-      Cámara de Ganaderos
-      <span>Cañas, Guanacaste · Desde 1988</span>
-    </div>
-  </a>
-  <div class="nav-links">
-    <a href="#" class="active" onclick="showSection('inicio',this)">Inicio</a>
-    <a href="#" onclick="showSection('nosotros',this)">Nosotros</a>
-    <a href="#" onclick="showSection('servicios',this)">Servicios</a>
-    <a href="#" onclick="showSection('subasta',this)">Subasta</a>
-    <a href="#" onclick="showSection('contacto',this)">Contacto</a>
+<div class="topbar">
+  <div class="topbar-left">
+    <span>Cañas, Guanacaste, Costa Rica</span>
+    <span>|</span>
+    <span>Cédula jurídica: 3-002-061346</span>
   </div>
-  <div class="hamburger" onclick="toggleMenu()" aria-label="Menú">
-    <span></span><span></span><span></span>
+  <div class="topbar-right">
+    <a href="tel:26691364">Tel. 2669-1364</a>
+    <a href="https://wa.me/50671224392" target="_blank">WhatsApp: 7122-4392</a>
+    <a href="mailto:infosubasta@camaradecanas.co">infosubasta@camaradecanas.co</a>
   </div>
-</nav>
-
-<div class="mobile-menu" id="mobileMenu">
-  <a href="#" class="active" onclick="showSection('inicio',this);toggleMenu()">Inicio</a>
-  <a href="#" onclick="showSection('nosotros',this);toggleMenu()">Nosotros</a>
-  <a href="#" onclick="showSection('servicios',this);toggleMenu()">Servicios</a>
-  <a href="#" onclick="showSection('subasta',this);toggleMenu()">Subasta</a>
-  <a href="#" onclick="showSection('contacto',this);toggleMenu()">Contacto</a>
 </div>
 
-<!-- INICIO -->
+<nav>
+  <div class="nav-inner">
+    <a class="nav-brand" href="#" onclick="return showSection('inicio')">
+      <div class="nav-logo">
+        <img src="https://raw.githubusercontent.com/mcjuarez27/camara-ganaderos-canas/main/Logo_Ca%CC%81mara_de_ganaderos.jpg" alt="Logo Cámara de Ganaderos de Cañas">
+      </div>
+      <div class="nav-brand-text">
+        <strong>Cámara de Ganaderos de Cañas</strong>
+        <span>Asociación Ganadera de Guanacaste</span>
+      </div>
+    </a>
+    <div class="nav-links">
+      <a href="#" class="active" onclick="return showSection('inicio',this)">Inicio</a>
+      <a href="#" onclick="return showSection('nosotros',this)">Nosotros</a>
+      <a href="#" onclick="return showSection('servicios',this)">Servicios</a>
+      <a href="#" onclick="return showSection('subasta',this)">Subasta</a>
+      <a href="#" onclick="return showSection('contacto',this)">Contacto</a>
+    </div>
+    <button class="hamburger" onclick="toggleMenu()" aria-label="Menú">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#" class="active" onclick="return showSection('inicio',this);toggleMenu()">Inicio</a>
+  <a href="#" onclick="return showSection('nosotros',this);toggleMenu()">Nosotros</a>
+  <a href="#" onclick="return showSection('servicios',this);toggleMenu()">Servicios</a>
+  <a href="#" onclick="return showSection('subasta',this);toggleMenu()">Subasta</a>
+  <a href="#" onclick="return showSection('contacto',this);toggleMenu()">Contacto</a>
+</div>
+
 <section id="inicio" class="active">
   <div class="hero">
-    <img class="hero-img" src="https://raw.githubusercontent.com/mcjuarez27/camara-ganaderos-canas/main/WhatsApp%20Image%202026-05-06%20at%2011.17.56.jpeg" alt="Recinto de subasta Cámara de Ganaderos de Cañas">
+    <img class="hero-img" src="https://raw.githubusercontent.com/mcjuarez27/camara-ganaderos-canas/main/WhatsApp%20Image%202026-05-06%20at%2011.17.56.jpeg" alt="Recinto de subasta Asociación Cámara de Ganaderos de Cañas">
     <div class="hero-overlay"></div>
     <div class="hero-content">
-      <div class="hero-badge">Cañas · Guanacaste · Costa Rica</div>
-      <h1>Más de 35 años<br>al servicio del <span>ganadero</span></h1>
-      <p>La Asociación Cámara de Ganaderos de Cañas apoya la producción ganadera de la región con subasta, agroveterinaria, pesaje, caballerizas y más.</p>
-      <div class="hero-buttons">
-        <a href="#" class="btn-primary" onclick="showSection('subasta')">Ver próxima subasta</a>
-        <a href="#" class="btn-secondary" onclick="showSection('servicios')">Nuestros servicios</a>
+      <div class="hero-logo-wrap">
+        <img src="https://raw.githubusercontent.com/mcjuarez27/camara-ganaderos-canas/main/Logo_Ca%CC%81mara_de_ganaderos.jpg" alt="Logo Cámara de Ganaderos">
+      </div>
+      <div class="hero-label">Asociación Cámara de Ganaderos de Cañas</div>
+      <h1>Fortaleciendo la<br>producción ganadera<br>de <em>Guanacaste</em></h1>
+      <p class="hero-desc">Más de 35 años apoyando al productor ganadero de la región con subasta, servicios veterinarios, pesaje y capacitación técnica.</p>
+      <div class="hero-ctas">
+        <button class="btn-dorado" onclick="showSection('subasta')">Ver próxima subasta</button>
+        <button class="btn-outline" onclick="showSection('servicios')">Nuestros servicios</button>
       </div>
     </div>
   </div>
-
   <div class="stats-bar">
-    <div class="stat-item"><div class="stat-num">35+</div><div class="stat-label">Años de experiencia</div></div>
-    <div class="stat-item"><div class="stat-num">26K</div><div class="stat-label">Seguidores en redes</div></div>
+    <div class="stat-item"><div class="stat-num">35+</div><div class="stat-label">Años de trayectoria</div></div>
     <div class="stat-item"><div class="stat-num">2</div><div class="stat-label">Subastas por semana</div></div>
+    <div class="stat-item"><div class="stat-num">26K</div><div class="stat-label">Seguidores en redes</div></div>
     <div class="stat-item"><div class="stat-num">5</div><div class="stat-label">Servicios disponibles</div></div>
   </div>
-
-  <div class="section-wrap">
-    <div class="section-title">Nuestras instalaciones</div>
-    <div class="divider"></div>
-    <p class="section-sub">Todo en un solo lugar, en el corazón de Cañas</p>
-
-    <div class="foto-grid" style="margin-bottom:2.5rem">
-      <img class="foto-wide" src="https://raw.githubusercontent.com/mcjuarez27/camara-ganaderos-canas/main/WhatsApp%20Image%202026-05-06%20at%2011.17.58.jpeg" alt="Ring de subasta en acción" loading="lazy">
-      <img src="https://raw.githubusercontent.com/mcjuarez27/camara-ganaderos-canas/main/WhatsApp%20Image%202026-05-06%20at%2011.17.57%20(1).jpeg" alt="Corrales con ganado" loading="lazy">
-      <img src="https://raw.githubusercontent.com/mcjuarez27/camara-ganaderos-canas/main/WhatsApp%20Image%202026-05-06%20at%2011.17.58%20(1).jpeg" alt="Ganado en corrales" loading="lazy">
-      <img src="https://raw.githubusercontent.com/mcjuarez27/camara-ganaderos-canas/main/WhatsApp%20Image%202026-05-06%20at%2011.17.57%20(2).jpeg" alt="Área exterior y Almacén San Rafael" loading="lazy">
+  <div class="page-wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Lo que ofrecemos</div>
+      <h2>Servicios para el ganadero</h2>
+      <p>Todas las herramientas que el productor necesita, en un solo lugar en el corazón de Cañas.</p>
+      <div class="divline"></div>
     </div>
-
-    <div class="services-grid">
-      <a class="service-card" href="#" onclick="showSection('subasta')">
-        <div class="service-icon">🐄</div>
+    <div class="srv-grid" style="margin-bottom:3.5rem">
+      <div class="srv-card" onclick="showSection('subasta')">
+        <div class="srv-icon"><svg viewBox="0 0 24 24"><path d="M3 21h18M9 8h1m5 0h1M9 12h1m5 0h1M5 21V7a2 2 0 012-2h10a2 2 0 012 2v14"/></svg></div>
         <h3>Subasta Ganadera</h3>
-        <p>Compra y venta de ganado con precios transparentes. Martes y sábados cada semana.</p>
-        <span class="service-tag">Martes y sábados</span>
-      </a>
-      <a class="service-card" href="#" onclick="showSection('servicios')">
-        <div class="service-icon">🌿</div>
+        <p>Compra y venta de ganado bovino con marcador de precios en tiempo real y registro oficial de transacciones.</p>
+        <span class="srv-tag">Martes 12 p.m. y Sábados 10 a.m.</span>
+      </div>
+      <div class="srv-card" onclick="showSection('servicios')">
+        <div class="srv-icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
         <h3>Almacén Agroveterinario San Rafael</h3>
-        <p>Productos veterinarios, agroquímicos y suministros para la actividad ganadera.</p>
-        <span class="service-tag">Abierto al público</span>
-      </a>
-      <a class="service-card" href="#" onclick="showSection('servicios')">
-        <div class="service-icon">⚖️</div>
+        <p>Protocolo sanitario, implantes, areteo, semillas de pasto, insumos veterinarios y todo para su finca.</p>
+        <span class="srv-tag">Lunes a Sábado · 7:00 a.m. – 4:00 p.m.</span>
+      </div>
+      <div class="srv-card" onclick="showSection('servicios')">
+        <div class="srv-icon"><svg viewBox="0 0 24 24"><path d="M12 3v1m0 16v1M4.22 4.22l.707.707m12.728 12.728l.707.707M3 12H2m20 0h-1M4.22 19.78l.707-.707M18.364 5.636l.707-.707M12 6a6 6 0 010 12"/></svg></div>
         <h3>Pesaje de Ganado</h3>
-        <p>Báscula con registro formal. Tarifa de ₡1.000 por animal, rápido y confiable.</p>
-        <span class="service-tag">₡1.000 por animal</span>
-      </a>
-      <a class="service-card" href="#" onclick="showSection('servicios')">
-        <div class="service-icon">🎓</div>
-        <h3>Capacitaciones</h3>
-        <p>Charlas técnicas y talleres para productores ganaderos de la región.</p>
-        <span class="service-tag">Disponibles para socios</span>
-      </a>
+        <p>Báscula disponible todos los días para pesaje de ganado bovino con constancia oficial del peso registrado.</p>
+        <span class="srv-tag">₡1.000 por animal · Todos los días</span>
+      </div>
+      <div class="srv-card" onclick="showSection('servicios')">
+        <div class="srv-icon"><svg viewBox="0 0 24 24"><path d="M2 20h20M6 20V10M18 20V10M12 20V4M9 4h6M6 10h12"/></svg></div>
+        <h3>Caballerizas</h3>
+        <p>Instalaciones para el hospedaje de caballos durante subastas y eventos, bajo modalidad de mensualidad.</p>
+        <span class="srv-tag">Consultar disponibilidad</span>
+      </div>
+      <div class="srv-card" onclick="showSection('servicios')">
+        <div class="srv-icon"><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
+        <h3>Capacitaciones Técnicas</h3>
+        <p>Charlas y talleres sobre manejo ganadero, nutrición, reproducción y buenas prácticas productivas.</p>
+        <span class="srv-tag">Abiertas al público · Sin costo</span>
+      </div>
+      <div class="srv-card" onclick="showSection('servicios')">
+        <div class="srv-icon"><svg viewBox="0 0 24 24"><path d="M3 2h18v4H3zM3 6v16h18V6M8 6v4m8-4v4m-4-4v4"/></svg></div>
+        <h3>Restaurante</h3>
+        <p>Cocina costarricense tradicional, bebidas y cerveza disponibles los días de subasta para todos los asistentes.</p>
+        <span class="srv-tag">Martes y Sábados de subasta</span>
+      </div>
+    </div>
+    <div class="sec-head">
+      <div class="eyebrow">Nuestras instalaciones</div>
+      <h2>Un recinto completo</h2>
+      <div class="divline"></div>
+    </div>
+    <div class="gal-grid">
+      <img class="g-main" src="https://raw.githubusercontent.com/mcjuarez27/camara-ganaderos-canas/main/WhatsApp%20Image%202026-05-06%20at%2011.17.56.jpeg" alt="Recinto principal de subasta" loading="lazy">
+      <img src="https://raw.githubusercontent.com/mcjuarez27/camara-ganaderos-canas/main/WhatsApp%20Image%202026-05-06%20at%2011.17.58.jpeg" alt="Ring de subasta" loading="lazy">
+      <img src="https://raw.githubusercontent.com/mcjuarez27/camara-ganaderos-canas/main/WhatsApp%20Image%202026-05-06%20at%2011.17.57%20(2).jpeg" alt="Área de almacén" loading="lazy">
+      <img src="https://raw.githubusercontent.com/mcjuarez27/camara-ganaderos-canas/main/WhatsApp%20Image%202026-05-06%20at%2011.17.58%20(1).jpeg" alt="Corrales de ganado" loading="lazy">
+      <img src="https://raw.githubusercontent.com/mcjuarez27/camara-ganaderos-canas/main/WhatsApp%20Image%202026-05-06%20at%2011.17.57.jpeg" alt="Sala de capacitaciones" loading="lazy">
     </div>
   </div>
 </section>
 
-<!-- NOSOTROS -->
 <section id="nosotros">
-  <div class="section-wrap">
-    <div class="section-title">Quiénes somos</div>
-    <div class="divider"></div>
-    <div class="nosotros-grid">
+  <div class="page-wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Quiénes somos</div>
+      <h2>La Asociación Cámara de Ganaderos de Cañas</h2>
+      <div class="divline"></div>
+    </div>
+    <div class="nos-layout">
       <div>
-        <img class="nosotros-foto" src="https://raw.githubusercontent.com/mcjuarez27/camara-ganaderos-canas/main/WhatsApp%20Image%202026-05-06%20at%2011.17.58%20(2).jpeg" alt="Ganado llegando a las instalaciones" loading="lazy">
-        <div class="nosotros-text">
-          <p>La Cámara de Ganaderos de Cañas es una asociación sin fines de lucro que agrupa a productores ganaderos de la región para fortalecer la actividad ganadera de Guanacaste.</p>
-          <p>Con más de 35 años de experiencia en el manejo de subastas, somos un referente del sector ganadero en la zona norte del país.</p>
-          <p>Nuestras instalaciones cuentan con infraestructura completa: recinto de subasta, corrales, almacén agroveterinario, báscula, caballerizas y restaurante.</p>
-          <div style="margin-top:1.5rem;padding:1rem;background:var(--gris);border-radius:8px;border-left:3px solid var(--dorado);font-size:0.9rem;color:var(--texto-suave)">
-            <strong style="color:var(--verde-oscuro)">📍 Ubicación:</strong><br>
-            Barrio Esperanza, 800 metros suroeste de la Gasolinera Cañas, Cañas, Guanacaste.
+        <img class="nos-foto" src="https://raw.githubusercontent.com/mcjuarez27/camara-ganaderos-canas/main/WhatsApp%20Image%202026-05-06%20at%2011.17.58%20(2).jpeg" alt="Ganado en las instalaciones" loading="lazy">
+        <div class="dato-box">
+          <strong>Nombre oficial:</strong> Asociación Cámara de Ganaderos de Cañas<br>
+          <strong>Cédula jurídica:</strong> 3-002-061346<br>
+          <strong>Tipo:</strong> Organización sin fines de lucro<br>
+          <strong>Establecimiento:</strong> Subasta Ganadera Cañas — CUE: 1880506046863<br>
+          <strong>Ubicación:</strong> 800 m suroeste de la Gasolinera, Cañas, Guanacaste
+        </div>
+      </div>
+      <div class="nos-txt">
+        <p>La Asociación Cámara de Ganaderos de Cañas es una organización sin fines de lucro con más de 35 años de trayectoria, dedicada a fortalecer la producción ganadera de Cañas, Guanacaste.</p>
+        <p>Agrupa a productores de la zona norte del país, brindándoles acceso a un recinto de subasta moderno, servicios veterinarios, báscula de pesaje, caballerizas y capacitación técnica permanente, todo en un mismo lugar.</p>
+        <p>Las instalaciones incluyen recinto cubierto con gradas, ring de exhibición con marcador digital de precios en tiempo real, corrales para el manejo del ganado, almacén agroveterinario, báscula oficial y sala de capacitaciones.</p>
+        <div class="mv-grid">
+          <div class="mv-card">
+            <div class="mv-lbl">Misión</div>
+            <h3>Nuestra razón de ser</h3>
+            <p>Fortalecer la actividad ganadera de la región de Cañas mediante la prestación de servicios de calidad que faciliten la comercialización, el acceso a insumos y la capacitación técnica de los productores.</p>
+          </div>
+          <div class="mv-card">
+            <div class="mv-lbl">Visión</div>
+            <h3>Hacia dónde vamos</h3>
+            <p>Ser la asociación ganadera de referencia en Guanacaste, reconocida por la excelencia en sus servicios, la transparencia en sus operaciones y el impacto positivo en el desarrollo rural de la región.</p>
+          </div>
+        </div>
+        <div class="val-list">
+          <div class="val-item">
+            <div class="val-num">01</div>
+            <div><h4>Transparencia</h4><p>Los precios de cada subasta se publican abiertamente después de cada sesión, garantizando que el mercado sea claro y accesible para todos.</p></div>
+          </div>
+          <div class="val-item">
+            <div class="val-num">02</div>
+            <div><h4>Compromiso con el productor</h4><p>Cada servicio está diseñado para facilitar el trabajo del ganadero, desde el acceso a insumos hasta la comercialización de su ganado.</p></div>
+          </div>
+          <div class="val-item">
+            <div class="val-num">03</div>
+            <div><h4>Desarrollo regional</h4><p>Contribuimos al crecimiento económico de Cañas y Guanacaste desde hace más de tres décadas, siendo motor de la actividad agropecuaria local.</p></div>
           </div>
         </div>
       </div>
-      <div class="nosotros-vals">
-        <div class="val-item">
-          <div class="val-icon">🤝</div>
-          <div><h4>Gremio sólido</h4><p>Representamos los intereses del ganadero y trabajamos por el desarrollo del sector.</p></div>
-        </div>
-        <div class="val-item">
-          <div class="val-icon">📊</div>
-          <div><h4>Transparencia</h4><p>Publicamos los precios de cada subasta para que el mercado sea claro y justo para todos.</p></div>
-        </div>
-        <div class="val-item">
-          <div class="val-icon">🎓</div>
-          <div><h4>Capacitación continua</h4><p>Organizamos charlas técnicas y talleres para fortalecer las capacidades de nuestros productores.</p></div>
-        </div>
-        <div class="val-item">
-          <div class="val-icon">🌱</div>
-          <div><h4>Desarrollo regional</h4><p>Contribuimos al crecimiento económico de Cañas y Guanacaste desde hace más de tres décadas.</p></div>
-        </div>
-        <div class="val-item">
-          <div class="val-icon">🏆</div>
-          <div><h4>Experiencia comprobada</h4><p>Más de 35 años organizando subastas y apoyando al ganadero costarricense.</p></div>
-        </div>
-      </div>
     </div>
   </div>
 </section>
 
-<!-- SERVICIOS -->
 <section id="servicios">
-  <div class="section-wrap">
-    <div class="section-title">Nuestros servicios</div>
-    <div class="divider"></div>
-    <p class="section-sub">Todo lo que ofrecemos en un solo lugar</p>
-
-    <!-- San Rafael -->
-    <div style="margin-bottom:2.5rem">
-      <img src="https://raw.githubusercontent.com/mcjuarez27/camara-ganaderos-canas/main/WhatsApp%20Image%202026-05-06%20at%2011.17.57%20(2).jpeg" alt="Almacén Agroveterinario San Rafael" loading="lazy" style="width:100%;height:260px;object-fit:cover;object-position:center 60%;border-radius:12px;margin-bottom:1.25rem">
-      <h3 style="font-family:Merriweather,serif;color:var(--verde-oscuro);margin-bottom:0.75rem;font-size:1.05rem">🌿 Almacén Agroveterinario San Rafael</h3>
-      <p style="color:var(--texto-suave);font-size:0.9rem;line-height:1.8;margin-bottom:1rem">Contamos con un almacén agroveterinario completo con productos para el manejo, salud y alimentación del ganado. Atendemos a socios y al público en general. Visiténos y compare precios.</p>
-      <div style="background:var(--gris);border-radius:8px;padding:1rem;font-size:0.875rem;color:var(--texto-suave)">
-        <i class="ti ti-phone" style="color:var(--verde)"></i> Consultas al <strong>2669-1364</strong> o WhatsApp <strong>7122-4392</strong>
+  <div class="page-wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Nuestros servicios</div>
+      <h2>Todo en un solo lugar</h2>
+      <p>Las instalaciones de la Cámara agrupan todos los servicios que el productor necesita, sin necesidad de trasladarse.</p>
+      <div class="divline"></div>
+    </div>
+    <div class="srv-bloque">
+      <div class="srv-bi">
+        <img class="srv-bf" src="https://raw.githubusercontent.com/mcjuarez27/camara-ganaderos-canas/main/WhatsApp%20Image%202026-05-06%20at%2011.17.57%20(2).jpeg" alt="Almacén Agroveterinario San Rafael" loading="lazy">
+        <div>
+          <div class="eyebrow">Almacén</div>
+          <h3>Agroveterinario San Rafael</h3>
+          <p>Ubicado dentro de las instalaciones de la Cámara, ofrece todo lo necesario para el manejo, salud y producción de su ganado. Atendemos tanto a socios como al público en general.</p>
+          <p><strong>Servicios:</strong> protocolo sanitario (desarrollo, engorde, reproductivo), implantes, areteo y acompañamiento, semillas de pasto (Mombasa, Toledo, Piata, Miyagui, Marandú, Decumbens, Massai, Mavuno, Zuri, maíz híbrido y criollo) e insumos veterinarios.</p>
+          <div class="chips">
+            <span class="chip"><strong>Horario:</strong> Lunes a sábado, 7:00 a.m. – 4:00 p.m.</span>
+            <span class="chip"><strong>WhatsApp directo:</strong> 8874-2907</span>
+            <span class="chip">Abierto al público en general</span>
+          </div>
+        </div>
       </div>
     </div>
-
-    <!-- Pesaje -->
-    <div style="margin-bottom:2.5rem;padding:1.5rem;background:white;border:1px solid #e5e3dc;border-radius:12px">
-      <h3 style="font-family:Merriweather,serif;color:var(--verde-oscuro);margin-bottom:0.75rem;font-size:1.05rem">⚖️ Servicio de pesaje de ganado</h3>
-      <p style="color:var(--texto-suave);font-size:0.9rem;line-height:1.8;margin-bottom:1rem">Báscula para pesaje de ganado bovino con registro y constancia. Ideal para control de producción, ventas y requisitos sanitarios.</p>
-      <table class="precio-table">
-        <thead><tr><th>Servicio</th><th>Tarifa</th><th>Detalle</th></tr></thead>
-        <tbody>
-          <tr><td>Pesaje por animal</td><td class="precio-highlight">₡1.000</td><td>Incluye constancia de peso</td></tr>
-          <tr><td>Disponibilidad</td><td>Lunes a sábado</td><td>Consultar horario exacto</td></tr>
-        </tbody>
-      </table>
-    </div>
-
-    <!-- Caballerizas -->
-    <div style="margin-bottom:2.5rem;padding:1.5rem;background:white;border:1px solid #e5e3dc;border-radius:12px">
-      <h3 style="font-family:Merriweather,serif;color:var(--verde-oscuro);margin-bottom:0.75rem;font-size:1.05rem">🐴 Caballerizas</h3>
-      <p style="color:var(--texto-suave);font-size:0.9rem;line-height:1.8;margin-bottom:1rem">Instalaciones para el hospedaje de caballos durante días de subasta y eventos especiales. Espacio seguro y funcional.</p>
-      <div style="background:var(--gris);border-radius:8px;padding:1rem;font-size:0.875rem;color:var(--texto-suave)">
-        <i class="ti ti-phone" style="color:var(--verde)"></i> Reservas y tarifas: <strong>2669-1364</strong> · WhatsApp <strong>7122-4392</strong>
+    <div class="srv-bloque">
+      <div class="srv-bi rev">
+        <img class="srv-bf" src="https://raw.githubusercontent.com/mcjuarez27/camara-ganaderos-canas/main/WhatsApp%20Image%202026-05-06%20at%2011.17.57%20(1).jpeg" alt="Corrales y área de pesaje" loading="lazy">
+        <div>
+          <div class="eyebrow">Báscula</div>
+          <h3>Servicio de Pesaje de Ganado</h3>
+          <p>Báscula para el pesaje de ganado bovino disponible todos los días. Incluye constancia oficial del peso, útil para control de producción, transacciones y requisitos del SENASA.</p>
+          <p>Para el traslado de ganado, el destino oficial en SENASA es <strong>"Subasta Ganadera Cañas"</strong>, CUE 1880506046863, a nombre de la Asociación, cédula 3-002-061346.</p>
+          <table class="ptable" style="margin-top:1.25rem">
+            <thead><tr><th>Servicio</th><th>Tarifa</th><th>Detalle</th></tr></thead>
+            <tbody>
+              <tr><td>Pesaje por animal</td><td class="ph">₡1.000</td><td>Incluye constancia de peso</td></tr>
+              <tr><td>Disponibilidad</td><td>Todos los días</td><td>Consultar horario: 2669-1364</td></tr>
+            </tbody>
+          </table>
+        </div>
       </div>
     </div>
-
-    <!-- Restaurante -->
-    <div style="margin-bottom:2.5rem;padding:1.5rem;background:white;border:1px solid #e5e3dc;border-radius:12px">
-      <h3 style="font-family:Merriweather,serif;color:var(--verde-oscuro);margin-bottom:0.75rem;font-size:1.05rem">🍽️ Restaurante</h3>
-      <div style="background:#fff8e7;border:1px solid var(--dorado);border-radius:8px;padding:1rem;margin-bottom:1rem;font-size:0.875rem;color:#7a5c0a">
-        <strong>Abierto únicamente los días de subasta</strong> — martes y sábados
+    <div class="srv-bloque">
+      <div class="srv-bi">
+        <img class="srv-bf" src="https://raw.githubusercontent.com/mcjuarez27/camara-ganaderos-canas/main/WhatsApp%20Image%202026-05-06%20at%2011.17.58%20(2).jpeg" alt="Instalaciones de la Cámara" loading="lazy">
+        <div>
+          <div class="eyebrow">Instalaciones</div>
+          <h3>Caballerizas</h3>
+          <p>Las instalaciones cuentan con caballerizas para el hospedaje de caballos, especialmente durante los días de subasta y eventos. El servicio se contrata bajo mensualidad fija.</p>
+          <div class="chips">
+            <span class="chip"><strong>Modalidad:</strong> Mensualidad</span>
+            <span class="chip"><strong>Consultas:</strong> 2669-1364</span>
+          </div>
+        </div>
       </div>
-      <p style="color:var(--texto-suave);font-size:0.9rem;line-height:1.8">Cocina tradicional costarricense en un ambiente ganadero auténtico. Disponible para todos los asistentes a la subasta.</p>
     </div>
-
-    <!-- Capacitaciones -->
-    <div class="cap-card">
-      <img src="https://raw.githubusercontent.com/mcjuarez27/camara-ganaderos-canas/main/WhatsApp%20Image%202026-05-06%20at%2011.17.57.jpeg" alt="Capacitación técnica para ganaderos" loading="lazy">
-      <div class="cap-card-body">
-        <h3>🎓 Capacitaciones técnicas</h3>
-        <p>La Cámara organiza periódicamente charlas y talleres técnicos para productores ganaderos. Temas incluyen manejo reproductivo, nutrición animal, razas de corte y buenas prácticas ganaderas. Consulte la próxima actividad en nuestras redes sociales o contáctenos directamente.</p>
+    <div class="srv-bloque">
+      <div class="srv-bi rev">
+        <img class="srv-bf" src="https://raw.githubusercontent.com/mcjuarez27/camara-ganaderos-canas/main/WhatsApp%20Image%202026-05-06%20at%2013.08.29.jpeg" alt="Restaurante de la subasta" loading="lazy" onerror="this.src='https://raw.githubusercontent.com/mcjuarez27/camara-ganaderos-canas/main/WhatsApp%20Image%202026-05-06%20at%2011.17.56.jpeg'">
+        <div>
+          <div class="eyebrow">Gastronomía</div>
+          <h3>Restaurante de la Subasta</h3>
+          <p>Abre únicamente los días de subasta — martes y sábados. Ofrece comida costarricense tradicional, bebidas y cerveza para todos los asistentes al evento.</p>
+          <div class="chips">
+            <span class="chip"><strong>Días:</strong> Martes y sábados de subasta</span>
+            <span class="chip">Comida, bebidas y cerveza</span>
+            <span class="chip">Menú disponible en el sitio</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="srv-bloque">
+      <div class="srv-bi">
+        <img class="srv-bf" src="https://raw.githubusercontent.com/mcjuarez27/camara-ganaderos-canas/main/WhatsApp%20Image%202026-05-06%20at%2011.17.57.jpeg" alt="Capacitación técnica para ganaderos" loading="lazy">
+        <div>
+          <div class="eyebrow">Formación</div>
+          <h3>Capacitaciones Técnicas</h3>
+          <p>La Cámara organiza periódicamente charlas y talleres técnicos para productores de la región. Temas incluyen manejo reproductivo, nutrición animal, razas de corte y buenas prácticas ganaderas.</p>
+          <p>La mayoría son <strong>abiertas al público sin ningún costo</strong>. Las fechas y temas se publican en redes sociales con anticipación.</p>
+          <div class="chips">
+            <span class="chip">Abiertas al público</span>
+            <span class="chip">Sin costo de inscripción</span>
+            <span class="chip">Fechas por Facebook y WhatsApp</span>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- SUBASTA -->
 <section id="subasta">
-  <div class="section-wrap">
-    <div class="section-title">Subasta ganadera</div>
-    <div class="divider"></div>
-
-    <div class="prox-banner">
-      <div class="prox-banner-icon">🐄</div>
-      <div>
-        <h3>Próxima subasta: sábado 09 de mayo, 2026</h3>
-        <p>Excelente lote de terneros disponible — consulte los animales en nuestro Facebook o grupo de WhatsApp</p>
+  <div class="page-wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Subasta ganadera</div>
+      <h2>Subasta Cañas</h2>
+      <p>Una de las subastas más activas de Guanacaste, con sesiones los martes y sábados de cada semana.</p>
+      <div class="divline"></div>
+    </div>
+    <div class="prox">
+      <div class="prox-txt">
+        <h3>Próxima subasta: sábado 09 de mayo de 2026</h3>
+        <p>Excelente lote de terneros disponible. Consulte los animales en nuestro Facebook o grupo de WhatsApp antes de asistir.</p>
+      </div>
+      <a href="https://www.facebook.com/camaradecanas" target="_blank" class="prox-btn">Ver en Facebook</a>
+    </div>
+    <div class="hor-grid">
+      <div class="hor-card">
+        <div class="dia">Subasta de mitad de semana</div>
+        <h4>Martes</h4>
+        <p>Inicio: 12:00 p.m. (mediodía). Restaurante disponible durante el evento.</p>
+      </div>
+      <div class="hor-card">
+        <div class="dia">Subasta semanal principal</div>
+        <h4>Sábado</h4>
+        <p>Inicio: 10:00 a.m. Restaurante disponible durante el evento.</p>
       </div>
     </div>
-
-    <div class="subasta-fotos">
-      <img src="https://raw.githubusercontent.com/mcjuarez27/camara-ganaderos-canas/main/WhatsApp%20Image%202026-05-06%20at%2011.17.58.jpeg" alt="Ring de subasta con animal y marcador de precios" loading="lazy">
-      <img src="https://raw.githubusercontent.com/mcjuarez27/camara-ganaderos-canas/main/WhatsApp%20Image%202026-05-06%20at%2011.17.58%20(1).jpeg" alt="Corrales con ganado el día de subasta" loading="lazy">
+    <div class="sub-fotos">
+      <img src="https://raw.githubusercontent.com/mcjuarez27/camara-ganaderos-canas/main/WhatsApp%20Image%202026-05-06%20at%2011.17.58.jpeg" alt="Ring de subasta con marcador de precios" loading="lazy">
+      <img src="https://raw.githubusercontent.com/mcjuarez27/camara-ganaderos-canas/main/WhatsApp%20Image%202026-05-06%20at%2011.17.58%20(1).jpeg" alt="Corrales llenos el día de subasta" loading="lazy">
     </div>
-
-    <h3 style="font-family:Merriweather,serif;color:var(--verde-oscuro);margin-bottom:0.5rem;font-size:1.05rem">Precios promedio — subasta del 05 de mayo de 2026</h3>
-    <p style="color:var(--texto-suave);font-size:0.85rem;margin-bottom:1.25rem">Precios en colones por kilogramo (¢/Kg)</p>
-
-    <div style="overflow-x:auto;margin-bottom:2rem">
-      <table class="precio-table" style="min-width:520px">
+    <div class="sec-head" style="margin-top:2.5rem">
+      <div class="eyebrow">Transparencia de mercado</div>
+      <h2>Precios promedio — martes 05 de mayo de 2026</h2>
+      <p>Colones por kilogramo (¢/Kg). Los precios se publican después de cada sesión de subasta.</p>
+      <div class="divline"></div>
+    </div>
+    <div style="overflow-x:auto;margin-bottom:2.5rem">
+      <table class="ptable" style="min-width:540px">
         <thead>
-          <tr>
-            <th>Peso (Kg)</th>
-            <th>Machos mín.</th>
-            <th>Machos máx.</th>
-            <th>Machos prom.</th>
-            <th>Hembras prom.</th>
-          </tr>
+          <tr><th>Rango de peso (Kg)</th><th>Machos mín.</th><th>Machos máx.</th><th>Machos prom.</th><th>Hembras prom.</th></tr>
         </thead>
         <tbody>
-          <tr><td>101–150</td><td>₡1.000</td><td>₡1.750</td><td class="precio-highlight">₡1.613</td><td class="precio-highlight">₡1.050</td></tr>
-          <tr><td>151–200</td><td>₡1.000</td><td>₡2.180</td><td class="precio-highlight">₡1.769</td><td class="precio-highlight">₡1.175</td></tr>
-          <tr><td>201–250</td><td>₡1.350</td><td>₡2.080</td><td class="precio-highlight">₡1.700</td><td class="precio-highlight">₡1.180</td></tr>
-          <tr><td>251–300</td><td>₡1.120</td><td>₡1.870</td><td class="precio-highlight">₡1.484</td><td class="precio-highlight">₡1.250</td></tr>
-          <tr><td>301–350</td><td>₡1.230</td><td>₡1.650</td><td class="precio-highlight">₡1.470</td><td class="precio-highlight">₡1.330</td></tr>
-          <tr><td>351–400</td><td>₡1.240</td><td>₡1.550</td><td class="precio-highlight">₡1.362</td><td class="precio-highlight">₡1.473</td></tr>
-          <tr><td>401–450</td><td>₡1.500</td><td>₡1.500</td><td class="precio-highlight">₡1.500</td><td class="precio-highlight">₡860</td></tr>
-          <tr><td>451–500</td><td>₡1.680</td><td>₡1.680</td><td class="precio-highlight">₡1.680</td><td class="precio-highlight">₡1.500</td></tr>
+          <tr><td>101 – 150</td><td>₡1.000</td><td>₡1.750</td><td class="ph">₡1.613</td><td class="ph">₡1.050</td></tr>
+          <tr><td>151 – 200</td><td>₡1.000</td><td>₡2.180</td><td class="ph">₡1.769</td><td class="ph">₡1.175</td></tr>
+          <tr><td>201 – 250</td><td>₡1.350</td><td>₡2.080</td><td class="ph">₡1.700</td><td class="ph">₡1.180</td></tr>
+          <tr><td>251 – 300</td><td>₡1.120</td><td>₡1.870</td><td class="ph">₡1.484</td><td class="ph">₡1.250</td></tr>
+          <tr><td>301 – 350</td><td>₡1.230</td><td>₡1.650</td><td class="ph">₡1.470</td><td class="ph">₡1.330</td></tr>
+          <tr><td>351 – 400</td><td>₡1.240</td><td>₡1.550</td><td class="ph">₡1.362</td><td class="ph">₡1.473</td></tr>
+          <tr><td>401 – 450</td><td>₡1.500</td><td>₡1.500</td><td class="ph">₡1.500</td><td class="ph">₡860</td></tr>
+          <tr><td>451 – 500</td><td>₡1.680</td><td>₡1.680</td><td class="ph">₡1.680</td><td class="ph">₡1.500</td></tr>
         </tbody>
       </table>
     </div>
-
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px">
-      <div style="background:var(--gris);border-radius:10px;padding:1.25rem;border-left:3px solid var(--verde)">
-        <h4 style="font-size:0.875rem;color:var(--verde-oscuro);margin-bottom:0.5rem">📱 Información en tiempo real</h4>
-        <p style="font-size:0.8rem;color:var(--texto-suave);line-height:1.6">Los lotes y animales disponibles se publican en <strong>Facebook</strong> y el grupo de <strong>WhatsApp</strong> antes de cada subasta. ¡Martes y sábados!</p>
-      </div>
-      <div style="background:var(--gris);border-radius:10px;padding:1.25rem;border-left:3px solid var(--azul)">
-        <h4 style="font-size:0.875rem;color:var(--verde-oscuro);margin-bottom:0.5rem">📋 ¿Cómo participar?</h4>
-        <p style="font-size:0.8rem;color:var(--texto-suave);line-height:1.6">Llame al <strong>2669-1364</strong> o escriba a <strong>infosubasta@camaradecanas.co</strong> para consultar requisitos de inscripción.</p>
+    <div class="pasos">
+      <h4>Cómo participar en la subasta</h4>
+      <div>
+        <div class="paso"><div class="paso-n">1</div><p>Comuníquese al <strong>2669-1364</strong> o WhatsApp <strong>7122-4392</strong> para consultar los requisitos de inscripción como vendedor o comprador.</p></div>
+        <div class="paso"><div class="paso-n">2</div><p>Para el traslado de animales, registre en SENASA el destino como <strong>"Subasta Ganadera Cañas"</strong>, CUE 1880506046863, a nombre de Asociación Cámara de Ganaderos, cédula 3-002-061346.</p></div>
+        <div class="paso"><div class="paso-n">3</div><p>Siga nuestro <strong>Facebook</strong> o el grupo de <strong>WhatsApp</strong> para recibir información sobre lotes disponibles antes de cada subasta.</p></div>
+        <div class="paso"><div class="paso-n">4</div><p>Preséntese el día de subasta: martes desde las 12 p.m. o sábado desde las 10 a.m., en nuestras instalaciones 800 m suroeste de la Gasolinera de Cañas.</p></div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- CONTACTO -->
 <section id="contacto">
-  <div class="section-wrap">
-    <div class="section-title">Contáctenos</div>
-    <div class="divider"></div>
-    <p class="section-sub">Estamos para atenderle de lunes a sábado</p>
-    <div class="contacto-grid">
-      <div>
-        <div class="contacto-card" style="margin-bottom:16px">
-          <h3>Información de contacto</h3>
-          <div class="contacto-item"><i class="ti ti-phone"></i><a href="tel:26691364">2669-1364 / 2669-0217</a></div>
-          <div class="contacto-item"><i class="ti ti-brand-whatsapp"></i><a href="https://wa.me/50671224392" target="_blank">+506 7122-4392</a></div>
-          <div class="contacto-item"><i class="ti ti-mail"></i><a href="mailto:infosubasta@camaradecanas.co">infosubasta@camaradecanas.co</a></div>
-          <div class="contacto-item"><i class="ti ti-map-pin"></i>800m suroeste Gasolinera Cañas, Guanacaste</div>
+  <div class="page-wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Contacto</div>
+      <h2>Estamos para atenderle</h2>
+      <p>Comuníquese con nosotros por cualquiera de los siguientes medios. Atendemos de lunes a sábado.</p>
+      <div class="divline"></div>
+    </div>
+    <div class="ctc-layout">
+      <div class="ctc-info">
+        <h3>Información de contacto</h3>
+        <div class="ctc-item">
+          <div class="ctc-ico"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.67A2 2 0 012 .18h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.09-1.09a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg></div>
+          <div><div class="ctc-lbl">Teléfonos</div><div class="ctc-val"><a href="tel:26691364">2669-1364</a> / <a href="tel:26690217">2669-0217</a></div></div>
         </div>
-        <div class="contacto-card">
-          <h3>Síguenos en redes</h3>
-          <div class="contacto-item"><i class="ti ti-brand-facebook"></i>Asoc. Cámara de Ganaderos Cañas</div>
-          <div style="margin-top:8px">
-            <a href="https://www.facebook.com/camaradecanas" target="_blank" style="display:inline-flex;align-items:center;gap:6px;background:#1877f2;color:white;font-size:13px;font-weight:600;padding:9px 18px;border-radius:6px;text-decoration:none">
-              <i class="ti ti-brand-facebook"></i> Ver en Facebook
-            </a>
-          </div>
+        <div class="ctc-item">
+          <div class="ctc-ico"><svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg></div>
+          <div><div class="ctc-lbl">WhatsApp — Subasta</div><div class="ctc-val"><a href="https://wa.me/50671224392" target="_blank">+506 7122-4392</a></div></div>
+        </div>
+        <div class="ctc-item">
+          <div class="ctc-ico"><svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg></div>
+          <div><div class="ctc-lbl">WhatsApp — Almacén San Rafael</div><div class="ctc-val"><a href="https://wa.me/50688742907" target="_blank">+506 8874-2907</a></div></div>
+        </div>
+        <div class="ctc-item">
+          <div class="ctc-ico"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
+          <div><div class="ctc-lbl">Correo electrónico</div><div class="ctc-val"><a href="mailto:infosubasta@camaradecanas.co">infosubasta@camaradecanas.co</a></div></div>
+        </div>
+        <div class="ctc-item">
+          <div class="ctc-ico"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+          <div><div class="ctc-lbl">Dirección</div><div class="ctc-val">800 metros suroeste de la Gasolinera, Cañas, Guanacaste, Costa Rica</div></div>
+        </div>
+        <div class="redes">
+          <a href="https://www.facebook.com/camaradecanas" target="_blank" class="red-btn"><svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>Facebook</a>
+          <a href="https://wa.me/50671224392" target="_blank" class="red-btn"><svg viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/></svg>WhatsApp</a>
         </div>
       </div>
       <div>
         <div class="mapa-wrap">
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3920.5!2d-85.1!3d10.33!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f9e4a5b3c2d1e0f%3A0x1234567890abcdef!2sC%C3%A1mara+de+Ganaderos+de+Ca%C3%B1as!5e0!3m2!1ses!2scr!4v1"
-            allowfullscreen loading="lazy" title="Ubicación Cámara de Ganaderos de Cañas">
-          </iframe>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15686.2!2d-85.1020!3d10.3350!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f9e5a3b2c1d0e0f%3A0xabcdef!2sCa%C3%B1as%2C+Guanacaste!5e0!3m2!1ses!2scr!4v1" allowfullscreen loading="lazy" title="Ubicación Cámara de Ganaderos de Cañas"></iframe>
         </div>
-        <div style="margin-top:16px;background:var(--gris);border-radius:10px;padding:1.25rem">
-          <h4 style="font-size:0.875rem;color:var(--verde-oscuro);margin-bottom:0.5rem">🕐 Horarios</h4>
-          <p style="font-size:0.8rem;color:var(--texto-suave);line-height:1.9">
-            Lunes a viernes: consultar por teléfono<br>
-            Días de subasta (mar y sáb): desde las 6:00 a.m.<br>
-            Restaurante: solo días de subasta
-          </p>
+        <p class="ub-nota">800 metros suroeste de la Gasolinera de Cañas, Guanacaste. Para traslado de ganado en SENASA registre el destino como "Subasta Ganadera Cañas", CUE 1880506046863.</p>
+        <div style="margin-top:1.5rem;background:var(--gris-claro);border-radius:8px;padding:1.25rem;border-left:3px solid var(--dorado)">
+          <strong style="font-size:11px;color:var(--verde-oscuro);display:block;margin-bottom:.75rem;text-transform:uppercase;letter-spacing:.5px">Horarios generales</strong>
+          <table style="font-size:.875rem;width:100%;border-collapse:collapse;color:var(--gris-texto)">
+            <tr><td style="padding:4px 0;font-weight:700;color:var(--texto);width:180px">Almacén San Rafael</td><td>Lunes a sábado, 7:00 a.m. – 4:00 p.m.</td></tr>
+            <tr><td style="padding:4px 0;font-weight:700;color:var(--texto)">Subasta martes</td><td>Inicio 12:00 p.m.</td></tr>
+            <tr><td style="padding:4px 0;font-weight:700;color:var(--texto)">Subasta sábado</td><td>Inicio 10:00 a.m.</td></tr>
+            <tr><td style="padding:4px 0;font-weight:700;color:var(--texto)">Restaurante</td><td>Solo días de subasta</td></tr>
+            <tr><td style="padding:4px 0;font-weight:700;color:var(--texto)">Pesaje de ganado</td><td>Todos los días (consultar)</td></tr>
+          </table>
         </div>
       </div>
     </div>
@@ -466,27 +578,51 @@ footer strong{color:white}
 </section>
 
 <footer>
-  <strong>Asociación Cámara de Ganaderos de Cañas</strong><br>
-  <span style="font-size:12px">Barrio Esperanza, Cañas, Guanacaste · infosubasta@camaradecanas.co</span>
-  <div class="footer-social">
-    <a href="https://www.facebook.com/camaradecanas" target="_blank"><i class="ti ti-brand-facebook"></i> Facebook</a>
-    <a href="tel:26691364"><i class="ti ti-phone"></i> 2669-1364</a>
-    <a href="https://wa.me/50671224392" target="_blank"><i class="ti ti-brand-whatsapp"></i> WhatsApp</a>
-    <a href="mailto:infosubasta@camaradecanas.co"><i class="ti ti-mail"></i> Correo</a>
+  <div class="ft-inner">
+    <div>
+      <div class="ft-brand">
+        <div class="ft-logo"><img src="https://raw.githubusercontent.com/mcjuarez27/camara-ganaderos-canas/main/Logo_Ca%CC%81mara_de_ganaderos.jpg" alt="Logo"></div>
+        <div class="ft-brand-txt"><strong>Asociación Cámara de Ganaderos de Cañas</strong><span>Cédula jurídica: 3-002-061346</span></div>
+      </div>
+      <p class="ft-desc">Organización sin fines de lucro dedicada a fortalecer la producción ganadera de Cañas, Guanacaste, desde hace más de 35 años.</p>
+    </div>
+    <div class="ft-col">
+      <h4>Secciones</h4>
+      <ul>
+        <li><a href="#" onclick="return showSection('inicio')">Inicio</a></li>
+        <li><a href="#" onclick="return showSection('nosotros')">Nosotros</a></li>
+        <li><a href="#" onclick="return showSection('servicios')">Servicios</a></li>
+        <li><a href="#" onclick="return showSection('subasta')">Subasta</a></li>
+        <li><a href="#" onclick="return showSection('contacto')">Contacto</a></li>
+      </ul>
+    </div>
+    <div class="ft-col">
+      <h4>Contacto</h4>
+      <ul>
+        <li><a href="tel:26691364">2669-1364 / 2669-0217</a></li>
+        <li><a href="https://wa.me/50671224392" target="_blank">WhatsApp: 7122-4392</a></li>
+        <li><a href="mailto:infosubasta@camaradecanas.co">infosubasta@camaradecanas.co</a></li>
+        <li>Cañas, Guanacaste, Costa Rica</li>
+      </ul>
+    </div>
   </div>
-  <p style="font-size:11px;margin-top:1.5rem;opacity:0.4">Sitio web desarrollado como iniciativa de práctica profesional · 2026</p>
+  <div class="ft-bot">
+    <span>© 2026 Asociación Cámara de Ganaderos de Cañas. Todos los derechos reservados.</span>
+    <strong>Cañas, Guanacaste, Costa Rica</strong>
+  </div>
 </footer>
 
-<a href="https://wa.me/50671224392" target="_blank" class="wa-float" aria-label="WhatsApp">
-  <i class="ti ti-brand-whatsapp"></i>
+<a href="https://wa.me/50671224392" target="_blank" class="wa-float" aria-label="Contactar por WhatsApp">
+  <svg viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/></svg>
 </a>
 
 <script>
-function showSection(id, linkEl){
+function showSection(id,linkEl){
   document.querySelectorAll('section').forEach(s=>s.classList.remove('active'));
   document.getElementById(id).classList.add('active');
-  document.querySelectorAll('.nav-links a, .mobile-menu a').forEach(a=>a.classList.remove('active'));
-  if(linkEl) linkEl.classList.add('active');
+  document.querySelectorAll('.nav-links a,.mobile-menu a').forEach(a=>a.classList.remove('active'));
+  if(linkEl){linkEl.classList.add('active');}
+  else{const m=document.querySelector(".nav-links a[onclick*="'"+id+"'"]");if(m)m.classList.add('active');}
   window.scrollTo({top:0,behavior:'smooth'});
   return false;
 }
@@ -496,9 +632,7 @@ function toggleMenu(){
 }
 document.addEventListener('click',function(e){
   const m=document.getElementById('mobileMenu');
-  if(m.style.display==='flex'&&!m.contains(e.target)&&!e.target.closest('.hamburger')){
-    m.style.display='none';
-  }
+  if(m.style.display==='flex'&&!m.contains(e.target)&&!e.target.closest('.hamburger')){m.style.display='none';}
 });
 </script>
 </body>
