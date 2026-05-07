@@ -205,6 +205,13 @@ footer{background:var(--verde-oscuro);color:rgba(255,255,255,.65);padding:3rem 2
 .lotes-wp-note{background:var(--dorado-suave);border:1px solid var(--dorado);border-radius:8px;padding:1.25rem 1.5rem;margin-top:2.5rem;font-size:.875rem;color:#7a5c0a;line-height:1.7}
 .lotes-wp-note strong{color:var(--verde-oscuro)}
 @media(max-width:768px){.lotes-grid{grid-template-columns:1fr}.lotes-aviso{flex-direction:column;align-items:flex-start}}
+
+.lb-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.85);z-index:1000;align-items:center;justify-content:center;padding:1.5rem;cursor:zoom-out}
+.lb-overlay.open{display:flex}
+.lb-overlay img{max-width:90vw;max-height:90vh;object-fit:contain;border-radius:8px;box-shadow:0 20px 60px rgba(0,0,0,.5)}
+.lb-close{position:fixed;top:20px;right:24px;color:white;font-size:2rem;cursor:pointer;font-weight:300;line-height:1;z-index:1001;background:rgba(0,0,0,.4);width:40px;height:40px;border-radius:50%;display:flex;align-items:center;justify-content:center;transition:background .2s}
+.lb-close:hover{background:rgba(0,0,0,.7)}
+.lb-trigger{cursor:zoom-in}
 </style>
 </head>
 <body>
@@ -592,7 +599,7 @@ footer{background:var(--verde-oscuro);color:rgba(255,255,255,.65);padding:3rem 2
 
     <div class="lotes-grid">
       <div class="lote-card" style="border-top:3px solid var(--dorado)">
-        <img class="lote-card-img" src="https://raw.githubusercontent.com/mcjuarez27/camara-ganaderos-canas/main/Comunicado.jpeg" alt="Comunicado oficial Cámara de Ganaderos de Cañas" loading="lazy" style="object-fit:contain;background:#f7f7f5">
+        <img class="lote-card-img lb-trigger" src="https://raw.githubusercontent.com/mcjuarez27/camara-ganaderos-canas/main/Comunicado.jpeg" alt="Comunicado oficial Cámara de Ganaderos de Cañas" loading="lazy" style="object-fit:contain;background:#f7f7f5" onclick="openLightbox(this.src, this.alt)" title="Clic para ampliar">
         <div class="lote-card-body">
           <div class="lote-fecha">Comunicado oficial · 06 de mayo de 2026</div>
           <h3>Ampliación del plazo de identificación individual de ganado bovino</h3>
@@ -792,6 +799,26 @@ footer{background:var(--verde-oscuro);color:rgba(255,255,255,.65);padding:3rem 2
     });
   }
 })();
+
+function openLightbox(src, alt) {
+  document.getElementById('lb-img').src = src;
+  document.getElementById('lb-img').alt = alt || '';
+  document.getElementById('lightbox').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closeLightbox() {
+  document.getElementById('lightbox').classList.remove('open');
+  document.body.style.overflow = '';
+}
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') closeLightbox();
+});
+
 </script>
+
+<div class="lb-overlay" id="lightbox" onclick="closeLightbox()">
+  <div class="lb-close" onclick="closeLightbox()">&#x2715;</div>
+  <img id="lb-img" src="" alt="">
+</div>
 </body>
 </html>
