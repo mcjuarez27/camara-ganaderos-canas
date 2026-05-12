@@ -354,12 +354,16 @@ footer{background:var(--verde-oscuro);color:rgba(255,255,255,.65);padding:3rem 2
       <h2>Un recinto completo</h2>
       <div class="divline"></div>
     </div>
-    <div class="gal-grid">
-      <img class="g-main" src="https://raw.githubusercontent.com/mcjuarez27/camara-ganaderos-canas/main/Entrada.jpeg" alt="Entrada de las instalaciones" loading="lazy">
-      <img src="https://raw.githubusercontent.com/mcjuarez27/camara-ganaderos-canas/main/WhatsApp%20Image%202026-05-06%20at%2011.17.58.jpeg" alt="Ring de subasta" loading="lazy">
-      <img src="https://raw.githubusercontent.com/mcjuarez27/camara-ganaderos-canas/main/WhatsApp%20Image%202026-05-06%20at%2011.17.57%20(2).jpeg" alt="Área de almacén" loading="lazy">
-      <img src="https://raw.githubusercontent.com/mcjuarez27/camara-ganaderos-canas/main/WhatsApp%20Image%202026-05-06%20at%2011.17.58%20(1).jpeg" alt="Corrales de ganado" loading="lazy">
-      <img src="https://raw.githubusercontent.com/mcjuarez27/camara-ganaderos-canas/main/Subasta%20llena.jpeg" alt="Subasta llena de asistentes" loading="lazy">
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:3.5rem">
+      <img src="https://raw.githubusercontent.com/mcjuarez27/camara-ganaderos-canas/main/Entrada.jpeg" alt="Entrada de las instalaciones" style="width:100%;height:210px;object-fit:cover;border-radius:8px" loading="lazy">
+      <img src="https://raw.githubusercontent.com/mcjuarez27/camara-ganaderos-canas/main/Subasta%20llena.jpeg" alt="Subasta llena de asistentes" style="width:100%;height:210px;object-fit:cover;border-radius:8px" loading="lazy">
+      <img src="https://raw.githubusercontent.com/mcjuarez27/camara-ganaderos-canas/main/Subasta.jpeg" alt="Ring de subasta" style="width:100%;height:210px;object-fit:cover;border-radius:8px" loading="lazy">
+      <img src="https://raw.githubusercontent.com/mcjuarez27/camara-ganaderos-canas/main/WhatsApp%20Image%202026-05-06%20at%2011.17.57%20(2).jpeg" alt="Área exterior e instalaciones" style="width:100%;height:210px;object-fit:cover;border-radius:8px" loading="lazy">
+      <img src="https://raw.githubusercontent.com/mcjuarez27/camara-ganaderos-canas/main/WhatsApp%20Image%202026-05-06%20at%2011.17.58%20(1).jpeg" alt="Corrales de ganado" style="width:100%;height:210px;object-fit:cover;border-radius:8px" loading="lazy">
+      <img src="https://raw.githubusercontent.com/mcjuarez27/camara-ganaderos-canas/main/WhatsApp%20Image%202026-05-06%20at%2011.17.58%20(2).jpeg" alt="Ganado llegando a las instalaciones" style="width:100%;height:210px;object-fit:cover;border-radius:8px" loading="lazy">
+      <img src="https://raw.githubusercontent.com/mcjuarez27/camara-ganaderos-canas/main/WhatsApp%20Image%202026-05-06%20at%2011.17.57%20(1).jpeg" alt="Ganado en corrales" style="width:100%;height:210px;object-fit:cover;border-radius:8px" loading="lazy">
+      <img src="https://raw.githubusercontent.com/mcjuarez27/camara-ganaderos-canas/main/Caballerizas.jpeg" alt="Caballerizas" style="width:100%;height:210px;object-fit:cover;border-radius:8px" loading="lazy">
+      <img src="https://raw.githubusercontent.com/mcjuarez27/camara-ganaderos-canas/main/WhatsApp%20Image%202026-05-06%20at%2011.17.56.jpeg" alt="Recinto de subasta" style="width:100%;height:210px;object-fit:cover;border-radius:8px" loading="lazy">
     </div>
   </div>
 </section>
@@ -455,8 +459,15 @@ footer{background:var(--verde-oscuro);color:rgba(255,255,255,.65);padding:3rem 2
         <div>
           <div class="eyebrow">Almacén</div>
           <h3>Agroveterinario San Rafael</h3>
-          <p>Ubicado dentro de las instalaciones de la Cámara, ofrece todo lo necesario para el manejo, salud y producción de su ganado. Atendemos tanto a socios como al público en general.</p>
-          <p><strong>Servicios:</strong> protocolo sanitario (desarrollo, engorde, reproductivo), implantes, areteo y acompañamiento, semillas de pasto (Mombasa, Toledo, Piata, Miyagui, Marandú, Decumbens, Massai, Mavuno, Zuri, maíz híbrido y criollo) e insumos veterinarios.</p>
+          <p>Ubicado dentro de las instalaciones de la Cámara, el Almacén Agroveterinario San Rafael ofrece una amplia línea de productos y servicios para el manejo, salud y producción de su ganado. Atendemos tanto a socios como al público en general.</p>
+          <ul style="font-size:.875rem;color:var(--gris-texto);line-height:1.9;margin:.5rem 0 .75rem 1.25rem">
+            <li>Insumos veterinarios — medicamentos, vitaminas, antiparasitarios y productos de uso ganadero</li>
+            <li>Suplementos y materias primas para bovinos — semolina, destilado de maíz, harina de soya, melaza, concentrados y más</li>
+            <li>Semillas de pasto y maíz en amplia variedad para renovación de pasturas</li>
+            <li>Protocolo sanitario — desarrollo, engorde y reproductivo</li>
+            <li>Implantes y areteo con acompañamiento técnico</li>
+            <li>Equipos, accesorios y artículos para finca</li>
+          </ul>
           <div class="chips">
             <span class="chip"><strong>Horario:</strong> Lunes a sábado, 7:00 a.m. – 5:00 p.m.</span>
             <span class="chip"><strong>Teléfono:</strong> 2668-6743</span>
@@ -504,13 +515,21 @@ footer{background:var(--verde-oscuro);color:rgba(255,255,255,.65);padding:3rem 2
               <tr><td>Asociados</td><td class="ph">₡30.000</td></tr>
             </tbody>
           </table>
-          <div class="chips" style="margin-top:1rem">
+          <div style="margin:1rem 0 .75rem">
+            <img src="https://raw.githubusercontent.com/mcjuarez27/camara-ganaderos-canas/main/Yegua.jpeg" alt="Caballo en las instalaciones" style="width:100%;height:200px;object-fit:cover;border-radius:8px" loading="lazy">
+          </div>
+          <div class="chips" style="margin-top:.5rem">
             <span class="chip">Veterinario y herrero incluidos</span>
             <span class="chip">Requisito: examen de anemia vigente</span>
             <span class="chip"><strong>Consultas:</strong> 2669-1364</span>
           </div>
         </div>
       </div>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin:-2rem 2rem 2.5rem">
+      <img src="https://raw.githubusercontent.com/mcjuarez27/camara-ganaderos-canas/main/Caballerizas2.jpeg" alt="Caballerizas vista frontal" style="width:100%;height:180px;object-fit:cover;border-radius:8px" loading="lazy">
+      <img src="https://raw.githubusercontent.com/mcjuarez27/camara-ganaderos-canas/main/Caballerizas3.jpeg" alt="Caballerizas cuadras numeradas" style="width:100%;height:180px;object-fit:cover;border-radius:8px" loading="lazy">
+      <img src="https://raw.githubusercontent.com/mcjuarez27/camara-ganaderos-canas/main/Herrero.jpeg" alt="Servicio de herrero" style="width:100%;height:180px;object-fit:cover;border-radius:8px" loading="lazy">
     </div>
     <div class="srv-bloque">
       <div class="srv-bi rev">
